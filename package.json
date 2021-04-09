@@ -2,6 +2,8 @@
   "name": "geocoding",
   "private": true,
   "dependencies": {
+    "@algolia/autocomplete-js": "^1.0.0-alpha.44",
+    "@mapbox/mapbox-gl-geocoder": "^4.7.0",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
@@ -10,6 +12,7 @@
     "dotenv": "^8.2.0",
     "jquery": "^3.6.0",
     "mapbox-gl": "^2.2.0",
+    "places.js": "^1.19.0",
     "popper.js": "^1.16.1",
     "turbolinks": "^5.2.0"
   },
