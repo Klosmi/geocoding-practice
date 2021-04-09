@@ -1,7 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Flats</h1>
-
+<div class="container">
+  <div class="row">
 <table>
   <thead>
     <tr>
@@ -11,24 +12,26 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="col-12">
     <% @flats.each do |flat| %>
       <tr>
         <td><%= flat.name %></td>
-        <td><%= flat.address %></td>
-        <td><%= link_to 'Show', flat %></td>
-        <td><%= link_to 'Edit', edit_flat_path(flat) %></td>
-        <td><%= link_to 'Destroy', flat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><p><%= flat.address %></p></td>
+        <td><p><%= link_to 'Show', flat %> ✭ </p></td>
+        <td><p><%= link_to 'Edit', edit_flat_path(flat) %> ✭ </p></td>
+        <td><p><%= link_to 'Destroy', flat, method: :delete, data: { confirm: 'Are you sure?' } %></p></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
+</div>
+</div>
 <br>
 
-<%= link_to 'New Flat', new_flat_path %>
+<p class="d-flex justify-content-center"> ✭ <%= link_to 'New Flat', new_flat_path %> ✭ </p>
 
 <div id="map"
      style="width: 100%; height: 600px;"
      data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
